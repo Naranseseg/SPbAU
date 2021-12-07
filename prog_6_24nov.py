@@ -7,10 +7,10 @@ def repeat(n):
             return result
         return fake_function
     return recurse_function
+
 @repeat(2)
 def plus_1(x):
     return x + 1
-
 
 @repeat(0)
 def mul_2(x):
