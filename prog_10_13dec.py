@@ -1,4 +1,4 @@
-def gcd(a, b):
+def gcd(a,b):
     num_1,num_2 = a,b
     while num_1 != 0 and num_2 != 0:
         if num_1>num_2:
