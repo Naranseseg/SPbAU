@@ -1,4 +1,3 @@
-%matplotlib inline
 
 from abc import ABC, abstractmethod
 import numpy as np
@@ -60,7 +59,7 @@ class MaterialPoint:
         self.position += self.velocity * MODEL_DELTA_T
         self.ptrace.append(self.position.copy())
         self.vtrace.append(self.velocity.copy())
-        self.area.append(abs(np.cross(self.position.copy(), self.velocity.copy()*MODEL_DELTA_T)))
+        self.area.append(abs(np.cross(self.position.copy(), self.velocity.copy()*MODEL_DELTA_T))/2)
 
 
     def apply_force(self, force):
