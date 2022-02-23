@@ -6,5 +6,4 @@ def gcd(a,b):
         else:
             num_2 = num_2 % num_1
     return max(num_1,num_2)
-print(gcd(1,24))
-print(gcd(3,21))
+
