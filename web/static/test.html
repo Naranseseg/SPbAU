@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Скандинавская мифология: Тест</title>
+</head>
+
+<body>
+<nav><a href="/">Главная</a>|<a href="creation.html">Создание мира|<a href="structure.html">Устройство мира</a>|<a href="pantheon.html">Пантеон</a>|<a href="mythical_creatures.html">Мифические существа</a>|<a href="death.html">Смерть мира</a>|Тест</a></nav><main>
+<h1>Скандинавская мифология</h1>
+	<h2>Тест</h2>
+	<img src="img/skand.jpg">
+	<dl>Вам предлагается пройти простой тест по скандинавской мифологии</dl>
+
+<section class="main">
+
+<form name="quiz" action="javascript:check();" class="quizform">
+
+<div class="quizsection">
+
+
+	<h3>Вопрос №1. Как звали великана, из которого Один, Вили и Ве создали мир?</h3>
+	
+	<div class="answer">
+		<input name="q1" value="value1" id="value11" type="radio" checked="checked" /> Улль
+	</div>
+
+	<div class="answer">
+		<input name="q1" value="value2" id="value21" type="radio" /> Имир
+	</div>
+
+	<div class="answer">
+		<input name="q1" value="value1" id="value31" type="radio" /> Видар
+	</div>
+</div>
+
+<div class="quizsection">
+
+	<h3>Вопрос №2. Что такое «Иггдрасиль»?</h3>
+
+	<div class="answer">
+		<input name="q2" value="value1" id="value12" type="radio" checked="checked" /> Бог цветов
+	</div>
+
+	<div class="answer">
+		<input name="q2" value="value2" id="value22" type="radio" /> Великое мировое древо
+	</div>
+
+	<div class="answer">
+		<input name="q2" value="value1" id="value32" type="radio" /> Чудовище
+	</div>
+
+</div>
+
+<div class="quizsection">
+
+	<h3>Вопрос №3. Кто является верховным Богом асов?</h3>
+
+	<div class="answer">
+		<input name="q3" value="value2" id="value13" type="radio" checked="checked" /> Один
+	</div>
+
+	<div class="answer">
+		<input name="q3" value="value1" id="value23" type="radio" /> Тор
+	</div>
+
+	<div class="answer">
+		<input name="q3" value="value1" id="value33" type="radio" /> Локи
+	</div>
+
+</div>
+
+<div class="quizsection">
+
+	<h3>Вопрос №4. Нидхёгг был...</h3>
+
+	<div class="answer">
+		<input name="q4" value="value1" id="value14" type="radio" checked="checked" /> Ящерицей
+	</div>
+
+	<div class="answer">
+		<input name="q4" value="value1" id="value24" type="radio" /> Змеёй
+	</div>
+
+	<div class="answer">
+		<input name="q4" value="value2" id="value34" type="radio" /> Драконом
+	</div>
+
+</div>
+
+<div class="quizsection">
+
+	<h3>Вопрос №5. Что такое Рагнарёк?</h3>
+
+	<div class="answer">
+		<input name="q5" value="value1" id="value15" type="radio" checked="checked" /> Волшебный конь
+	</div>
+
+	<div class="answer">
+		<input name="q5" value="value1" id="value25" type="radio" /> Рождение мира
+	</div>
+
+	<div class="answer">
+		<input name="q5" value="value2" id="value35" type="radio" /> Гибель богов и всего мира
+	</div>
+
+</div>
+<dl> </dl>
+<input value="Узнать результат" type="submit" />
+<dl> </dl>
+</form>
+
+</section>
+
+<script type="text/javascript">// <![CDATA[
+
+   var result;
+   
+   function check()
+
+   {
+
+      var question;
+      var value1;
+      var value2;
+      
+      
+      question = 1;
+      value1 = 0;
+      value2 = 0;
+      
+      
+      result = "";
+
+      var choice;
+      
+      for (question = 1; question <=5; question++) {
+      
+         var q = document.forms['quiz'].elements['q'+question];
+
+            for (var i = 0; i < q.length; i++) {
+               if (q[i].checked) {
+                  choice = q[i].value;
+               }
+            }
+
+            if (choice === "value1") {
+               value1++;
+            }
+
+            if (choice === "value2") {
+               value2++;
+            }
+
+
+         }
+
+      if ((value2 === 0)||(value2 === 1)||(value2 === 2)) {
+
+         // Нет правильных ответов
+         result = "ocenka2";
+
+      }
+
+      else if (value2 === 3) {
+
+         // Один правильный ответ
+         result = "ocenka3";
+
+      }
+
+      else if (value2 === 4) {
+
+         // Два правильных ответа
+         result = "ocenka4";
+
+      }
+
+      else if (value2 === 5) {
+
+         // Три правильных ответа
+         result = "ocenka5";
+
+      }
+
+
+      else {
+         result = "404";
+      }
+
+      window.location = result + '.html';
+
+   }
+
+// ]]></script>
+
+
+<nav><a href="/">Главная</a>|<a href="creation.html">Создание мира|<a href="structure.html">Устройство мира</a>|<a href="pantheon.html">Пантеон</a>|<a href="mythical_creatures.html">Мифические существа</a>|<a href="death.html">Смерть мира</a>|Тест</a></nav><main>
+</body>
+</html>
